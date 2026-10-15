@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftKeep — Traditional Craft Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CraftKeep home"><img class="brand-logo" src="assets/craftkeep-logo.png" alt="CraftKeep — Learn, Preserve, Craft, Share"></a>
+    <nav><a href="#explore">Explore crafts</a><a href="#how-it-works">How it works</a><a href="#contribute">Contribute</a></nav>
+    <button class="outline-btn" id="contrastBtn" aria-label="Toggle high contrast">◐ Contrast</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TRADITION, PRESERVED • FUTURE, INSPIRED</p>
+        <h1>Keep the craft.<br><span>Pass on the story.</span></h1>
+        <p class="hero-text">A simple digital space where artisans can preserve traditional skills and young learners can discover them through step-by-step guides, local languages and audio.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#explore">Explore craft library <span>→</span></a><a class="text-link" href="#how-it-works">See how it works</a></div>
+        <div class="hero-stats"><div><strong>Learn</strong><small>Step-by-step guides</small></div><div><strong>Listen</strong><small>Audio-friendly learning</small></div><div><strong>Preserve</strong><small>Stories from artisans</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of traditional pottery and craft tools">
+        <div class="sun"></div><div class="art-label">Made by hand.<br>Remembered for generations.</div>
+        <div class="pot pot-back"></div><div class="pot pot-front"></div><div class="leaf leaf-one"></div><div class="leaf leaf-two"></div>
+        <div class="art-stamp">CRAFT<br>✦<br>KEEP</div>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
+      <div class="section-heading"><div><p class="eyebrow">THE KNOWLEDGE LIBRARY</p><h2>Explore living traditions</h2><p class="muted">Discover a craft, learn its process and hear the story behind it.</p></div>
+      <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search crafts or materials..." aria-label="Search crafts"></div></div>
+      <div class="filters" role="group" aria-label="Filter craft category"><button class="filter active" data-filter="All">All crafts</button><button class="filter" data-filter="Pottery">Pottery</button><button class="filter" data-filter="Textile">Textile</button><button class="filter" data-filter="Painting">Painting</button><button class="filter" data-filter="Woodwork">Woodwork</button></div>
+      <div class="craft-grid" id="craftGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No crafts match your search. Try another word.</p>
+    </section>
+
+    <section class="feature-band" id="how-it-works">
+      <div class="feature-intro"><p class="eyebrow">HOW CRAFTKEEP HELPS</p><h2>From an elder’s hands to a learner’s screen.</h2><p>AI can help organize and explain knowledge, but the artisan remains the expert and owner of the tradition.</p></div>
+      <div class="feature-list">
+        <article><span class="feature-number">01</span><div><h3>Record the process</h3><p>Capture photos, videos, tools, materials and the artisan’s own explanation.</p></div></article>
+        <article><span class="feature-number">02</span><div><h3>Make it easier to learn</h3><p>AI can draft clear steps, simplify difficult terms and translate descriptions into local languages for review.</p></div></article>
+        <article><span class="feature-number">03</span><div><h3>Learn at your own pace</h3><p>Use searchable guides and browser audio to listen while practising each step.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section contribute" id="contribute">
+      <div><p class="eyebrow">HELP PRESERVE A SKILL</p><h2>Every craft has a story.</h2><p class="muted">Share a craft idea you would like future generations to learn. This demo stores your entry in this page only.</p></div>
+      <form id="contributeForm">
+        <label for="craftName">Craft name</label><input id="craftName" required placeholder="e.g. Palm-leaf weaving">
+        <label for="artisanStory">What makes it special?</label><textarea id="artisanStory" required rows="3" placeholder="Describe the craft, artisan or local tradition..."></textarea>
+        <button class="primary-btn" type="submit">Add my craft idea <span>＋</span></button><p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#" aria-label="CraftKeep home"><img class="brand-logo" src="assets/craftkeep-logo.png" alt="CraftKeep — Learn, Preserve, Craft, Share"></a><p>Respect the maker. Credit the source. Keep traditions alive.</p><small>Student project prototype • AI features shown are illustrative, not connected to a live AI service.</small></footer>
+
+  <dialog id="craftDialog"><button class="dialog-close" id="closeDialog" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
